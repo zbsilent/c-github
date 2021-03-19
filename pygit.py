@@ -29,7 +29,6 @@ def printRepos():
   for repo in g.get_user().get_repos():
     allRepos.append(repo)
     i+=1
-
     repoTable.add_row(str(i), repo.name, repo.html_url, ("Private" if repo.private else "Public"), ("Yes" if repo.fork else "No"))
     console.print(repoTable)
   return allRepos
